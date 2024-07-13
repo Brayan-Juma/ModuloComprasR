@@ -1,0 +1,310 @@
+/* Proveedores.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.proveedores {
+  padding: 20px 20px 20px 40px; /* Ajuste del padding con más espacio a la izquierda */
+  max-width: calc(100% - 40px); /* Ajuste del ancho máximo restando el padding izquierdo */
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  
+}
+
+.proveedores h2 {
+    text-align: center;
+    margin: 40px 0 40px 0;
+    color: #333;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.actions button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #0056b3;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.proveedores-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.proveedores-table th,
+.proveedores-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.proveedores-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.proveedores-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.proveedores-table tr:hover {
+    background-color: #e9ecef;
+}
+
+.proveedores-table .acciones button {
+    margin-right: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+.proveedores-table .acciones button:hover {
+    color: #007bff;
+}
+
+.proveedores-table .acciones button.eliminar {
+    color: #dc3545;
+}
+
+.proveedores-table .acciones button.eliminar:hover {
+    color: #c82333;
+}
+
+.proveedores-table td:first-child,
+.proveedores-table th:first-child {
+    width: 50px;
+}
+
+.proveedores-table td:nth-child(2),
+.proveedores-table th:nth-child(2) {
+    width: 50px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button,
+.pagination a {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination button:hover,
+.pagination a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pagination .active a {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Formulario de agregar/editar proveedor */
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slide-down 0.3s ease-out;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+form input,
+form select {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Aumentar el tamaño de la fuente */
+    transition: border-color 0.3s ease;
+    width: 90%;
+    font-family: 'Roboto', sans-serif; /* Usar la fuente Roboto */
+}
+
+form input:focus,
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    font-family: 'Roboto', sans-serif; /* Usar la fuente Roboto */
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Confirmación de eliminación */
+
+.modal-content p {
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal-content .confirm-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-content .confirm-buttons button {
+    margin: 10px 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .confirm-buttons .confirm-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.modal-content .confirm-buttons .confirm-delete:hover {
+    background-color: #c82333;
+}
+
+.modal-content .confirm-buttons .confirm-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.modal-content .confirm-buttons .confirm-cancel:hover {
+    background-color: #5a6268;
+}
+.proveedor-activo {
+  color: green;
+  font-size: 24px; /* Tamaño del ícono */
+  transition: transform 0.3s;
+}
+
+.proveedor-activo:hover {
+  transform: scale(1.2); /* Efecto de agrandamiento al pasar el ratón */
+}
+
+.proveedor-inactivo {
+  color: red;
+  font-size: 24px; /* Tamaño del ícono */
+  transition: transform 0.3s;
+}
+
+.proveedor-inactivo:hover {
+  transform: scale(1.2); /* Efecto de agrandamiento al pasar el ratón */
+}

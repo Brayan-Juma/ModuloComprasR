@@ -1,0 +1,138 @@
+/* Contenedor principal */
+.detalle-factura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff; /* Fondo claro para el contenedor */
+    width: calc(100% + 10cm); /* Ancho total aumentado en 10 cm */
+    margin-left: -2.5cm; /* Mueve 3 cm hacia la izquierda */
+    margin-right: -8cm; /* Mueve 5 cm hacia la derecha */
+    padding-left: 2.5cm; /* Ajuste de padding para compensar el movimiento */
+    padding-right: 5cm; /* Ajuste de padding para compensar el movimiento */
+}
+
+/* Título del formulario */
+.detalle-factura h2 {
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Contenedor del formulario */
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Seis columnas iguales */
+    gap: 1.5rem; /* Espaciado entre los campos */
+    background-color: #fcfcfc; /* Fondo del formulario */
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para cada div dentro del formulario */
+.formulario div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para las etiquetas */
+.formulario label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para los campos de entrada */
+.formulario input, .formulario select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Botón de submit */
+.button-container {
+    grid-column: span 6;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.detalle-factura button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.detalle-factura button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Tabla de proveedores */
+.proveedores-table {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.proveedores-table th,
+.proveedores-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.proveedores-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.proveedores-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Totales */
+.totales {
+    margin-top: 2rem;
+    text-align: right;
+    width: 100%;
+    max-width: 800px;
+}
+
+.totales p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+/* Botones horizontales */
+.button-container-horizontal {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+}
+
+.button-container-horizontal button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container-horizontal button:hover {
+    background-color: #0056b3;
+}

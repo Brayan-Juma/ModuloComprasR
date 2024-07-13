@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.productos {
+    padding: 20px 20px 20px 40px; /* Ajuste del padding con más espacio a la izquierda y menos padding superior */
+    max-width: calc(100% - 60px); /* Ajuste del ancho máximo restando el padding izquierdo y derecho */
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    min-height: 88vh; /* Asegura que el contenedor abarque toda la altura del viewport */
+}
+
+.productos h2 {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    color: #333;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar .search-icon {
+    font-size: 20px;
+    color: #333;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.productos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.productos-table th,
+.productos-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.productos-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.productos-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.productos-table tr:hover {
+    background-color: #e9ecef;
+}
